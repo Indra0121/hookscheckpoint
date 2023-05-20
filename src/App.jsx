@@ -17,24 +17,24 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // Start the timer when the component mounts
+
     this.interval = setInterval(() => {
       this.setState((prevState) => ({
-        timer: prevState.show ? prevState.timer + 1 : 0 // Increment the timer by 1 if show is true, otherwise reset to 0
+        timer: prevState.show ? prevState.timer + 1 : 0 
       }));
     }, 1000);
   }
 
   componentWillUnmount() {
-    // Clear the timer when the component unmounts
+ 
     clearInterval(this.interval);
   }
 
-  // A handler function to toggle the show state
+
   handleToggle = () => {
     this.setState((prevState) => ({
-      show: !prevState.show, // Flip the show boolean
-      timer: 0 // Reset the timer to 0 when toggling off
+      show: !prevState.show, 
+      timer: 0 
     }));
   };
 
@@ -43,7 +43,7 @@ class App extends Component {
       <div className="App">
         <h1>React Project</h1>
         <button onClick={this.handleToggle}>Toggle Profile</button>
-        {this.state.show && ( // Conditional rendering based on the show state
+        {this.state.show && (
           <div className="profile">
             <img src={this.state.person.imgs} alt="Profile" />
             <h2>{this.state.person.fullName}</h2>
