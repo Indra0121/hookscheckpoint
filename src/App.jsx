@@ -1,18 +1,23 @@
-import React from 'react'
-import './App.css'
-import Fullname from './component/profile/fullname.jsx'
-import Profilephoto from './component/profile/profilephoto.jsx';
-import Adresse from './component/profile/adresse.jsx'
-const App = () => {
+import React from 'react';
+import Profile from './component/profile/profile';
+import './App.css';
+import phoyo from './component/profile/img/20456790.jpeg'
+function App() {
   return (
-    <>
-    <div>
-    <Profilephoto />
-    <Fullname />
-    <Adresse />
+    <div className="App">
+      <Profile
+        fullName="Rilliane D'Autriche"
+        bio="daughter of evil"
+        profession="Queen"
+      >
+        <img
+          src={phoyo}
+          alt="Profile"
+          style={{ width: '200px', height: '200px', borderRadius: '50%' }}
+        />
+      </Profile>
     </div>
-    </>
-  )
+  );
 }
 
-export default App
+export default App;
