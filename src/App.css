@@ -1,0 +1,22 @@
+body{
+    background-color: #242424;
+
+}
+img{
+    height: 200px;
+    width: 300px;
+    border-radius: 80%;
+    border: aquamarine 2px solid;
+}
+h3{
+    text-align: center;
+}
+div{
+    font-size: larger;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
